@@ -45,4 +45,8 @@ npm install
 npm run dev
 ```
 
+## Support
+
 *Built by [Agenty](https://agenty.com) for learning web scraping*
+
+Want to disucss a web scraping project? Contact us on support@agenty.com
