@@ -24,18 +24,6 @@ const Header = () => {
         </Link>
 
         <nav className="flex items-center gap-1">
-          <Link
-            href="/"
-            className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-            prefetch={false}
-          >
-            <Database className="h-3.5 w-3.5" />
-            Products
-          </Link>
-          <div className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-mono text-muted-foreground">
-            <Code2 className="h-3.5 w-3.5" />
-            <span className="text-terminal-green">500</span> items
-          </div>
           <a
             href="https://agenty.com?utm_source=scrapingsandbox.com&utm_medium=referral&utm_campaign=header"
             target="_blank"
