@@ -1,10 +1,9 @@
 # Scraping Sandbox
 
-Scraping Sandbox is an open-source web scraping playground for building, testing, and running scraping agents in a safe, browser-based environment.
+[Scraping Sandbox](https://scrapingsandbox.com/) is an open-source web scraping playground for building, testing, and running scraping agents in a safe, browser-based environment.
 
-It’s designed for developers, data engineers, and automation builders who want a fast way to prototype scrapers, experiment with selectors, and explore AI-powered web scraping workflows.
+It’s designed for developers, data engineers, and automation builders who want a fast way to prototype scrapers, experiment with selectors, and explore [AI-powered web scraping](https://agenty.com/) workflows.
 
----
 
 ## Purpose
 
@@ -17,15 +16,11 @@ Scraping Sandbox is **free to use** and intended for:
 
 So, you are free to scrape the site and use it to practice web scraping techniques without worrying about copyright claims, restrictions, or takedowns.
 
----
-
----
 
 ## Live Demo
 
 Website: https://scrapingsandbox.com  
 
----
 
 ## Tech Stack
 
@@ -34,7 +29,6 @@ Website: https://scrapingsandbox.com
 - Deployment: OpenNext + Cloudflare Workers  
 - Language: TypeScript  
 
----
 
 ## Installation
 
@@ -42,9 +36,10 @@ Website: https://scrapingsandbox.com
 git clone https://github.com/Agenty/scrapingsandbox.git
 cd scrapingsandbox
 npm install
+```
 
 ## Running Locally
 
-```
+```bash
 npm run dev
 ```
