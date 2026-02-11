@@ -17,11 +17,22 @@ Scraping Sandbox is **free to use** and intended for:
 
 So, you are free to scrape the site and use it to practice web scraping techniques without worrying about copyright claims, restrictions, or takedowns.
 
-
 ## Live Demo
 
 Website: https://scrapingsandbox.com  
 
+## Rate Limit
+
+To simulate real-world websites and promote responsible scraping practices, Scraping Sandbox enforces a rate limit on all requests.
+
+**Limit:** 60 requests per 10 seconds
+
+This helps:
+- Prevent abuse and accidental DDoS-like traffic
+- Encourage realistic scraping behavior
+- And yes… we also need to pay $$ for [hosting on Cloudflare workers](https://developers.cloudflare.com/workers/) 🙂
+
+If you exceed the limit, requests may be temporarily blocked. Please design your scrapers to respect this rate, just like you would with real production websites.
 
 ## Tech Stack
 
