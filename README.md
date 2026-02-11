@@ -1,47 +1,50 @@
-# OpenNext Starter
+# Scraping Sandbox
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Scraping Sandbox is an open-source web scraping playground for building, testing, and running scraping agents in a safe, browser-based environment.
 
-## Getting Started
+It’s designed for developers, data engineers, and automation builders who want a fast way to prototype scrapers, experiment with selectors, and explore AI-powered web scraping workflows.
 
-Read the documentation at https://opennext.js.org/cloudflare.
+---
 
-## Develop
+## Purpose
 
-Run the Next.js development server:
+Scraping Sandbox is **free to use** and intended for:
+
+- Learning web scraping techniques
+- Experimenting with selectors and extraction logic
+- Prototyping scraping workflows
+- Educational and research purposes
+
+So, you are free to scrape the site and use it to practice web scraping techniques without worrying about copyright claims, restrictions, or takedowns.
+
+---
+
+---
+
+## Live Demo
+
+Website: https://scrapingsandbox.com  
+
+---
+
+## Tech Stack
+
+- Framework: Next.js (App Router)  
+- UI: Tailwind CSS, Radix UI, ShadCN  
+- Deployment: OpenNext + Cloudflare Workers  
+- Language: TypeScript  
+
+---
+
+## Installation
 
 ```bash
+git clone https://github.com/Agenty/scrapingsandbox.git
+cd scrapingsandbox
+npm install
+
+## Running Locally
+
+```
 npm run dev
-# or similar package manager command
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Preview
-
-Preview the application locally on the Cloudflare runtime:
-
-```bash
-npm run preview
-# or similar package manager command
-```
-
-## Deploy
-
-Deploy the application to Cloudflare:
-
-```bash
-npm run deploy
-# or similar package manager command
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
