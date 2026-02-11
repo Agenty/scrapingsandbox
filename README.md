@@ -43,3 +43,5 @@ npm install
 ```bash
 npm run dev
 ```
+
+*Built by [Agenty](https://agenty.com) for learning web scraping*
