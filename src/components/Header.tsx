@@ -1,4 +1,4 @@
-import { Terminal, Database, Code2, Github } from 'lucide-react';
+import { Terminal, Github } from 'lucide-react';
 import Link from 'next/link';
 
 const Header = () => {
