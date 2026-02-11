@@ -4,6 +4,7 @@
 
 It’s designed for developers, data engineers, and automation builders who want a fast way to prototype scrapers, experiment with selectors, and explore [AI-powered web scraping](https://agenty.com/) workflows.
 
+![Scraping sandbox website preview](/public/scraping-sandbox.png)
 
 ## Purpose
 
@@ -44,4 +45,8 @@ npm install
 npm run dev
 ```
 
+## Support
+
 *Built by [Agenty](https://agenty.com) for learning web scraping*
+
+Want to disucss a web scraping project? Contact us on support@agenty.com
