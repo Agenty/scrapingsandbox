@@ -32,6 +32,7 @@ export default function ProductDetail() {
         <Link
           href="/"
           className="mt-4 inline-block text-sm text-primary hover:underline font-mono"
+          prefetch={false}
         >
           ← Back to products
         </Link>
@@ -52,6 +53,7 @@ export default function ProductDetail() {
       <Link
         href="/"
         className="inline-flex items-center gap-1.5 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors mb-6"
+        prefetch={false}
       >
         <ArrowLeft className="h-3.5 w-3.5" />
         Back to products

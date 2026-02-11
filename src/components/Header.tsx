@@ -5,7 +5,11 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link
+          href="/"
+          className="flex items-center gap-2 group"
+          prefetch={false}
+        >
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 group-hover:border-primary/40 transition-colors">
             <Terminal className="h-5 w-5 text-primary" />
           </div>
@@ -23,6 +27,7 @@ const Header = () => {
           <Link
             href="/"
             className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            prefetch={false}
           >
             <Database className="h-3.5 w-3.5" />
             Products

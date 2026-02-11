@@ -1,7 +1,7 @@
 import { Star, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import type { Product } from "@/data/products";
+import type { Product } from '@/data/products';
 import Link from 'next/link';
 
 interface ProductCardProps {
@@ -13,6 +13,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <Link
       href={`/product/${product.id}`}
       className="group block rounded-xl border border-border bg-card p-3 card-hover"
+      prefetch={false}
     >
       <div className="relative mb-3 overflow-hidden rounded-lg bg-secondary aspect-square">
         <Image
@@ -43,7 +44,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </span>
           <div className="flex items-center gap-0.5 shrink-0">
             <Star className="h-3 w-3 fill-terminal-yellow text-terminal-yellow" />
-            <span className="text-[11px] font-mono text-muted-foreground">{product.rating}</span>
+            <span className="text-[11px] font-mono text-muted-foreground">
+              {product.rating}
+            </span>
           </div>
         </div>
 
@@ -63,10 +66,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         <div className="flex flex-wrap gap-1 pt-1">
-          <Badge variant="secondary" className="text-[10px] font-mono px-1.5 py-0">
+          <Badge
+            variant="secondary"
+            className="text-[10px] font-mono px-1.5 py-0"
+          >
             {product.category}
           </Badge>
-          <Badge variant="outline" className="text-[10px] font-mono px-1.5 py-0 text-muted-foreground">
+          <Badge
+            variant="outline"
+            className="text-[10px] font-mono px-1.5 py-0 text-muted-foreground"
+          >
             {product.sku}
           </Badge>
         </div>
