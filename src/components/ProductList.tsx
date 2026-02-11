@@ -85,7 +85,7 @@ export default function ProductList() {
           <p className="mt-1.5 text-sm text-muted-foreground max-w-lg">
             Explore 500+ sample products from open-source e-commerce datasets in
             this web scraping sandbox. Search, filter, paginate, and inspect
-            real-world product data to practice scraping and data extraction.
+            real-world product data to practice web scraping, crawling and data extraction.
           </p>
 
           <div className="mt-3 flex items-center gap-3 text-xs font-mono">
