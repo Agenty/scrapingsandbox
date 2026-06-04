@@ -6,20 +6,36 @@ It’s designed for developers, data engineers, and automation builders who want
 
 ![Scraping sandbox website preview](/public/scraping-sandbox.png)
 
-## Purpose
-
-Scraping Sandbox is **free to use** and intended for:
-
-- Learning web scraping techniques
-- Experimenting with selectors and extraction logic
-- Prototyping scraping workflows
-- Educational and research purposes
-
-So, you are free to scrape the site and use it to practice web scraping techniques without worrying about copyright claims, restrictions, or takedowns.
-
 ## Live Demo
 
 Website: https://scrapingsandbox.com  
+
+### Practice Pages
+
+| Page | Description |
+|------|-------------|
+| [Infinite Scroll](https://scrapingsandbox.com/infinite-scroll) | Practice scraping dynamically loaded content that loads additional records as users scroll down the page. |
+| [Data Table](https://scrapingsandbox.com/data-table) | Test extraction of structured tabular data from sortable and searchable HTML tables. |
+| [Form Submit](https://scrapingsandbox.com/form-submit) | Practice form automation, validation handling, input filling, and form submission workflows. |
+| [Rate Limit](https://scrapingsandbox.com/rate-limit) | Simulate HTTP 429 rate limiting responses to test retry logic, backoff strategies, and scraper resilience. |
+
+## Live Demo
+
+Scraping Sandbox is a **free web scraping practice website** designed for developers, data scraping engineers who want to learn and test scraping techniques in a safe environment.
+
+Use Scraping Sandbox to:
+
+- Learn web scraping fundamentals with realistic examples
+- Practice CSS selectors, XPath selectors, and DOM traversal
+- Extract structured and unstructured data from web pages
+- Test Playwright, Puppeteer, Selenium, BeautifulSoup, Scrapy, and other scraping frameworks
+- Experiment with infinite scroll scraping and dynamic content loading
+- Practice HTML table extraction and data parsing
+- Automate form filling, validation, and submission workflows
+- Simulate rate limiting, blocking behavior, and HTTP 429 responses
+- Build and validate retry logic, backoff strategies, and scraper resilience
+- Learn browser automation with AI agents and headless browser techniques
+- Test anti-bot handling and scraping error recovery workflows
 
 ## Rate Limit
 

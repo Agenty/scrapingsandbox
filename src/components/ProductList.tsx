@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Terminal } from 'lucide-react';
 import { products } from '@/data/products';
 import ProductFilters from '@/components/ProductFilters';
 import ProductCard from '@/components/ProdcutCard';
@@ -72,13 +71,7 @@ export default function ProductList() {
       {/* Hero Banner */}
       <div className="mb-8 rounded-xl border border-border bg-card p-6 glow-border relative overflow-hidden">
         <div className="scanline absolute inset-0 pointer-events-none" />
-        <div className="relative">
-          <div className="flex items-center gap-2 mb-2">
-            <Terminal className="h-4 w-4 text-primary" />
-            <span className="text-xs font-mono text-muted-foreground">
-              $ GET api.agenty.com/:agent_id?limit=500
-            </span>
-          </div>
+        <div className="relative">         
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
             <span className="text-gradient">Scraping Sandbox</span>
           </h1>
