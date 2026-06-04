@@ -47,6 +47,7 @@ const Header = () => {
                 <DropdownMenuItem key={l.to} asChild>
                   <Link
                     href={l.to}
+                    prefetch={false}
                     className="flex items-start gap-2 cursor-pointer"
                   >
                     <l.icon className="h-4 w-4 mt-0.5 text-primary" />

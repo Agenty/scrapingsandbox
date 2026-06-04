@@ -11,6 +11,7 @@ const Footer = () => {
               <Link
                 key={p.to}
                 href={p.to}
+                prefetch={false}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 {p.label}
