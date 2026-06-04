@@ -1,1 +1,7 @@
+# *
 User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+
+# Sitemaps
+Sitemap: https://scrapingsandbox.com/sitemap.xml

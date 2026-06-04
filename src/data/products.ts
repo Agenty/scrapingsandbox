@@ -1,5 +1,13 @@
 // Product data generator - 500 sample products inspired by open source e-commerce datasets
 
+export interface ProductVariant {
+    color: string;
+    size: string;
+    sku: string;
+    inStock: boolean;
+    price: number;
+}
+
 export interface Product {
     id: number;
     title: string;
@@ -15,6 +23,7 @@ export interface Product {
     rating: number;
     reviewCount: number;
     createdAt: string;
+    variants: ProductVariant[];
 }
 
 const categories = [
@@ -96,6 +105,31 @@ const tags: Record<string, string[]> = {
 
 const imageColors = ['3b82f6', '10b981', 'f59e0b', 'ef4444', '8b5cf6', 'ec4899', '06b6d4', 'f97316', '84cc16', '6366f1'];
 
+const variantColors = ['Red', 'Blue', 'Black', 'White', 'Green', 'Navy', 'Gray', 'Brown', 'Pink', 'Orange'];
+const variantSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+
+function generateVariants(rng: () => number, baseSku: string, basePrice: number): ProductVariant[] {
+    const numVariants = Math.floor(rng() * 4) + 2; // 2-5 variants
+    const variants: ProductVariant[] = [];
+    const usedCombos = new Set<string>();
+
+    for (let v = 0; v < numVariants; v++) {
+        const color = variantColors[Math.floor(rng() * variantColors.length)];
+        const size = variantSizes[Math.floor(rng() * variantSizes.length)];
+        const combo = `${color}-${size}`;
+        if (usedCombos.has(combo)) continue;
+        usedCombos.add(combo);
+        variants.push({
+            color,
+            size,
+            sku: `${baseSku}-${color.substring(0, 3).toUpperCase()}-${size}`,
+            inStock: rng() > 0.2,
+            price: Math.round((basePrice + (rng() - 0.5) * 10) * 100) / 100,
+        });
+    }
+    return variants;
+}
+
 function seededRandom(seed: number): () => number {
     let s = seed;
     return () => {
@@ -128,6 +162,9 @@ function generateProducts(): Product[] {
         const date = new Date(2024, 0, 1);
         date.setDate(date.getDate() - dayOffset);
 
+        const sku = `SKU-${category.substring(0, 3).toUpperCase()}-${String(i).padStart(4, '0')}`;
+        const inStock = rng() > 0.15;
+
         products.push({
             id: i,
             title: `${adj} ${item}`,
@@ -138,11 +175,12 @@ function generateProducts(): Product[] {
             description: `High-quality ${adj.toLowerCase()} ${item.toLowerCase()} from ${vendor}. Perfect for everyday use. Features premium materials and thoughtful design. This ${category.toLowerCase()} product has been carefully crafted to meet the highest standards of quality and performance.`,
             image: `https://placehold.co/400x400/${imageColors[colorIdx]}/ffffff?text=${encodeURIComponent(item.split(' ')[0])}`,
             tags: selectedTags,
-            sku: `SKU-${category.substring(0, 3).toUpperCase()}-${String(i).padStart(4, '0')}`,
-            inStock: rng() > 0.15,
+            sku,
+            inStock,
             rating,
             reviewCount: Math.floor(rng() * 500),
             createdAt: date.toISOString(),
+            variants: generateVariants(rng, sku, price),
         });
     }
 

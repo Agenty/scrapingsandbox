@@ -26,9 +26,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.title} - ${'Scraping Sandbox'}`,
     description: product.description,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: product.title,
+      description: product.description,
+      type: 'website',
+      images: [
+        {
+          url: 'https://scrapingsandbox.com/og.png',
+          width: 1200,
+          height: 630,
+          alt: 'Scraping Sandbox',
+        },
+      ],
+    },
   };
 }
 
-export default function Product() {
+export default function Page() {
   return <ProductDetail />;
 }
