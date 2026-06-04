@@ -12,6 +12,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link
       href={`/product/${product.id}`}
+      prefetch={false}
       className="product-card group block rounded-xl border border-border bg-card p-3 card-hover"
     >
       <div className="relative mb-3 overflow-hidden rounded-lg bg-secondary aspect-square">

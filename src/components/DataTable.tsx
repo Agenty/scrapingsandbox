@@ -134,6 +134,7 @@ const DataTable = () => {
                 <TableCell className="product-name">
                   <Link
                     href={`/product/${p.id}`}
+                    prefetch={false}
                     className="text-sm font-medium hover:text-primary transition-colors"
                   >
                     {p.title}
