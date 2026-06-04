@@ -51,7 +51,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <InfiniteScroll />;
+      <InfiniteScroll />
     </main>
   );
 }
